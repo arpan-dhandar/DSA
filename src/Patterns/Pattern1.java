@@ -1,5 +1,8 @@
-class Solution {
-    public void pattern1(int n) {
+package Patterns;
+
+public class Pattern1 {
+
+    public void printPattern(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print("*");
@@ -9,6 +12,6 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        new Solution().pattern1(4);
+        new Pattern1().printPattern(4);
     }
 }
