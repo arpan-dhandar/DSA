@@ -85,8 +85,21 @@ public class Patterns {
             System.out.println();
         }
     }
+
+    void Pattern11(int n) {
+        int start = 1;
+        for (int i = 1; i< n; i++){
+            if(i % 2 == 0) start = 1;
+            else start = 0;
+            for (int j = 0; j<=i ; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
     public static void main(String[] args) {
        Patterns obj = new Patterns();
-       obj.Pattern10(5);
+       obj.Pattern11(5);
     }
 }
