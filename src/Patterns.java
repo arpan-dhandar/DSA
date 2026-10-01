@@ -183,12 +183,22 @@ public class Patterns {
         }
     }
 
+    // Pattern 14
+    void Pattern14(int n) {
+        for (int i = 1; i <= n; i++) {
+            for(char ch = 'A'; ch < 'A'+i; ch++){
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+
     // Main method
     public static void main(String[] args) {
 
         Patterns obj = new Patterns();
 
 
-         obj.Pattern13(5);
+         obj.Pattern14(5);
     }
 }
