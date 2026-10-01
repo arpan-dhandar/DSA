@@ -171,6 +171,17 @@ public class Patterns {
         }
     }
 
+    // Pattern 13
+    void Pattern13(int n) {
+        int num =1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num+ " ");
+                num += 1;
+            }
+            System.out.println();
+        }
+    }
 
     // Main method
     public static void main(String[] args) {
@@ -178,6 +189,6 @@ public class Patterns {
         Patterns obj = new Patterns();
 
 
-         obj.Pattern12(5);
+         obj.Pattern13(5);
     }
 }
