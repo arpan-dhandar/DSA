@@ -14,9 +14,17 @@ public class recursion {
         System.out.println(i);
         printNumRes(i-1, n);
     }
+   
+   public static void printNumBacktracking(int i, int n){
+    if(i<1) return;
+
+    printNumBacktracking(i -1,n);
+    System.out.println(i);
+   }
     public static void main(String[] args){
        
         printNum(1, 10);
         printNumRes(10, 1);
+        printNumBacktracking(5,5);
     }
 }
