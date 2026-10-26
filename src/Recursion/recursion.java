@@ -21,10 +21,18 @@ public class recursion {
     printNumBacktracking(i -1,n);
     System.out.println(i);
    }
-    public static void main(String[] args){
+   
+   public static void printNumBacktrackingRes(int i, int n){
+    if(i>n) return;
+
+    printNumBacktrackingRes(i +1,n);
+    System.out.println(i);
+   }
+   public static void main(String[] args){
        
         printNum(1, 10);
         printNumRes(10, 1);
         printNumBacktracking(5,5);
+        printNumBacktrackingRes(1,5);
     }
 }
