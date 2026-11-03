@@ -34,11 +34,30 @@ public class sLargestNum {
 
     }
 
+    static int optimal(int[] arr){
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for(int i = 0; i< arr.length; i++){
+            if(arr[i]> largest){
+                secondLargest = largest;
+                largest = arr[i];
+            } else if( arr[i]> secondLargest && arr[i]< largest){
+                secondLargest = arr[i];
+            }
+        }
+        if( secondLargest == Integer.MIN_VALUE){
+            return -1;
+        }
+        return secondLargest;
+    }
     public static void main(String[] args) {
         int[] arr = { 21, 45, 89, 63, 44, 28 };
 
         System.out.println("Brute Force: " + brute(arr.clone()));
 
         System.out.println("Better Approch: " + better(arr.clone()));
+
+        System.out.println("Optimal Approch: "+ optimal(arr.clone()));
     }
 }
