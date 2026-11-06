@@ -1,3 +1,5 @@
+package Recursion;
+
 public class ParamterSum{
     public static void parameterSum(int i, int sum){
         if (i<1) {
