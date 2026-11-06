@@ -1,37 +1,54 @@
 
 package Arrays;
+import java.util.ArrayList;
 
 public class RemoveDuplicates {
 
-    static int removeDuplicates(int[] arr) {
+    static int brute(int[] arr){
+        ArrayList<Integer> list = new ArrayList<>();
 
+        for(int i = 0; i< arr.length; i++){
+
+            if ( !list.contains(arr[i])) {
+                list.add(arr[i]);
+            }
+        }
+        for(int i = 0; i< list.size(); i++){
+            arr[i] = list.get(i);
+        }
+        return list.size();
+    }
+
+    static int optimal(int[] arr){
         int i = 0;
 
-        for (int j = 1; j < arr.length; j++) {
-
+        for(int j = 1; j <arr.length; j++){
             if (arr[i] != arr[j]) {
-
                 i++;
-
                 arr[i] = arr[j];
             }
         }
-
-        return i + 1;
+        return i+1;
     }
-
     public static void main(String[] args) {
+int[] arr = {1, 1, 2, 2, 3, 3, 4};
 
-        int[] arr = {1, 1, 2, 2, 3, 3, 4};
+        int k = brute(arr);
 
-        int k = removeDuplicates(arr);
+        System.out.println("Unique elements: " + k);
 
-        System.out.println("Number of unique elements: " + k);
+        for (int i = 0; i < k; i++) {
+            System.out.print(arr[i] + " ");
+        }
 
-        System.out.print("Array after removing duplicates: ");
+         int l = optimal(arr);
 
-        for (int x = 0; x < k; x++) {
-            System.out.print(arr[x] + " ");
+        System.out.println("Unique elements: " + l);
+
+        for (int i = 0; i < k; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
-}
+        
+    }
+
