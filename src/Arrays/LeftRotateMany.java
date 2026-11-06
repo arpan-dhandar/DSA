@@ -17,7 +17,7 @@ public class LeftRotateMany {
         }
 
         for (int i =0; i < d; i++){
-            arr[n-d+1] = temp[i];
+            arr[n-d+i] = temp[i];
         }
     }
     public static void main(String[] args) {
