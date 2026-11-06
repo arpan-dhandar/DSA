@@ -45,7 +45,7 @@ public class LeftRotateMany {
 
         int d = 2;
 
-        brute(arr, d);
+       // brute(arr, d);
         optimal(arr, d);
 
         for (int i = 0; i < arr.length; i++) {
