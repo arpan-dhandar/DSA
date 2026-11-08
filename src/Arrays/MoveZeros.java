@@ -19,6 +19,10 @@ public class MoveZeros {
             arr[i] = temp[i];
          }
     }
+    
+    static void optimal(int[] arr){
+        
+    }
     public static void main(String[] args) {
         
         int[] arr = {1, 0, 2, 0, 3, 4, 0};
