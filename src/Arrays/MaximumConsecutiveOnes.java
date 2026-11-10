@@ -19,4 +19,12 @@ public class MaximumConsecutiveOnes {
 
         return maxCount;
     }
+    public static void main(String[] args) {
+
+        int[] arr = {1, 1, 0, 1, 1, 1};
+
+        int result = maxOnes(arr);
+
+        System.out.println("Maximum Consecutive Ones: " + result);
+    }
 }
