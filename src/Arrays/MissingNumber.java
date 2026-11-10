@@ -34,4 +34,18 @@ public class MissingNumber{
         }
         return -1;
     }
+
+    public static int optimal(int[] nums){
+        int xor = 0;
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++) {
+            xor ^= i ^ nums[i];
+        }
+        xor ^= n;
+
+        return xor;
+    }
+
+    
 }
