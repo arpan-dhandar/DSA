@@ -18,4 +18,8 @@ public class MissingNumber{
         }
         return -1;
     }
+
+    public static int better(int[] nums) {
+        
+    }
 }
