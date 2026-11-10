@@ -47,5 +47,14 @@ public class MissingNumber{
         return xor;
     }
 
-    
+    public static void main(String[] args) {
+
+    int[] nums = {3, 0, 1};
+
+    System.out.println("Brute Force: " + brute(nums));
+
+    System.out.println("Better: " + better(nums));
+
+    System.out.println("Optimal: " + optimal(nums));
+}
 }
