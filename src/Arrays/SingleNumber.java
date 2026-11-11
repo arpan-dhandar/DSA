@@ -1,11 +1,12 @@
+
 package Arrays;
 
-public class SingleNumber {
-    
-package Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SingleNumber {
 
+    // 1. Brute Force Approach
     static int brute(int[] arr) {
 
         int n = arr.length;
@@ -29,32 +30,17 @@ public class SingleNumber {
         return -1;
     }
 
-    public static void main(String[] args) {
-
-        int[] arr = {2, 3, 5, 4, 5, 3, 4};
-
-        System.out.println(brute(arr));
-    }
-}
-
-package Arrays;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class SingleNumber {
-
+    // 2. Better Approach (HashMap)
     static int better(int[] arr) {
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        // Count frequency of each element
+        // Count frequency
         for (int num : arr) {
-
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
-        // Find the element appearing once
+        // Find element appearing once
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 
             if (entry.getValue() == 1) {
@@ -65,18 +51,7 @@ public class SingleNumber {
         return -1;
     }
 
-    public static void main(String[] args) {
-
-        int[] arr = {2, 3, 5, 4, 5, 3, 4};
-
-        System.out.println(better(arr));
-    }
-}
-
-package Arrays;
-
-public class SingleNumber {
-
+    // 3. Optimal Approach (XOR)
     static int optimal(int[] arr) {
 
         int xor = 0;
@@ -89,12 +64,15 @@ public class SingleNumber {
         return xor;
     }
 
+    // Main Method
     public static void main(String[] args) {
 
         int[] arr = {2, 3, 5, 4, 5, 3, 4};
 
-        System.out.println(optimal(arr));
-    }
-}
+        System.out.println("Brute Force Answer: " + brute(arr));
 
+        System.out.println("Better Answer: " + better(arr));
+
+        System.out.println("Optimal Answer: " + optimal(arr));
+    }
 }
